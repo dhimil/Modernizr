@@ -1,12 +1,15 @@
 language: node_js
-node_js: 
+node_js:
 - 0.10
-before_script: 
+before_script:
   - npm install grunt-cli -g
   - grunt build
-script: grunt travis --verbose
-env: 
-  global: 
+  - npm install browserstack-runner -g
+script:
+  - grunt travis --verbose
+  - browserstack-runner
+env:
+  global:
   - BROWSERSTACK_USERNAME=dhimil
   - secure: "MjhPBwsIrpNFkSaObqu8WlJpX2Z19o1PVu8tZx378ZQZnTg0QVSCaQrlgox8dvlEeHNlS6193BGU5y0iMC4f4XLNIBj2dwnTr8oEDqGahPryLfzlU5KaTYyfjeH080cnQOyjUJ1rS/zPLMBwqK44BPvvnG234qORqheF/n62vqA="
   - secure: noRIQS5Wv/9SFs4bK+0NZNQ7nnL+WfP6PhkPQR5QxNmXR1S4wjdiHy4/yv4aO/j1URgFw1YiFf+80k7YIn/9vIT+lMzE0wiw5FXTQM9PIB2mPHC2wzc0Y1Xj5kfuFXZemWTt73y1IkT53PjxezslVSduPKTxjXJuPmUk2FG3yaw=

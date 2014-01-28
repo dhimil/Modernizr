@@ -7,7 +7,7 @@ before_script:
   - npm install browserstack-runner 
 script:
   - grunt travis --verbose
-  - node ./node_modules/browserstack-runner/bin/cli.js
+  - node ./node_modules/.bin/browserstack-runner
 env:
   global:
   - BROWSERSTACK_USERNAME=dhimil

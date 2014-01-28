@@ -244,7 +244,7 @@ module.exports = function( grunt ) {
   });
 
   // Testing tasks
-  grunt.registerTask('test', ['jshint', 'build', 'qunit', 'nodeunit', 'browserstack-runner']);
+  grunt.registerTask('test', ['jshint', 'build', 'qunit', 'nodeunit']);
 
   // Sauce labs CI task
   grunt.registerTask('sauce', ['connect','saucelabs-qunit']);

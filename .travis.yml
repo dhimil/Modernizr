@@ -4,10 +4,10 @@ node_js:
 before_script:
   - npm install grunt-cli -g
   - grunt build
-  - npm install browserstack-runner -g
+  - npm install browserstack-runner 
 script:
   - grunt travis --verbose
-  - browserstack-runner
+  - node ./node_modules/browserstack-runner/bin/cli.js
 env:
   global:
   - BROWSERSTACK_USERNAME=dhimil
